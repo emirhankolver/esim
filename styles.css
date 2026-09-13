@@ -1,0 +1,349 @@
+/*
+  One stylesheet for four pages. No framework and no build step: the site is
+  four files a browser can open from disk, which is the whole point of putting
+  it on GitHub Pages.
+*/
+
+:root {
+  --blue: #0088ff;
+  --blue-dark: #005aa8;
+  --blue-soft: #e6f3ff;
+  --ink: #1d1d1f;
+  --muted: #6e6e73;
+  --paper: #ffffff;
+  --page: #f5f5f7;
+  --line: #d2d2d7;
+  --radius: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --blue: #3da4ff;
+    --blue-dark: #8ac6ff;
+    --blue-soft: #0e3b62;
+    --ink: #f5f5f7;
+    --muted: #aeaeb2;
+    --paper: #1c1c1e;
+    --page: #000000;
+    --line: #48484a;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+/* ─── Header ─────────────────────────────────────────────────────────── */
+
+header {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 64px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-right: auto;
+}
+
+.brand img { width: 30px; height: 30px; border-radius: 7px; display: block; }
+
+nav a {
+  color: var(--muted);
+  font-size: 15px;
+  margin-left: 18px;
+}
+nav a:first-child { margin-left: 0; }
+nav a.active { color: var(--ink); }
+
+/* ─── Hero ───────────────────────────────────────────────────────────── */
+
+.hero { padding: 72px 0 56px; text-align: center; }
+
+.hero img.mark {
+  width: 84px;
+  height: 84px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 44px;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+}
+
+.lede {
+  font-size: 20px;
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 auto 28px;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--blue);
+  color: #fff;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.cta:hover { text-decoration: none; background: var(--blue-dark); }
+@media (prefers-color-scheme: dark) {
+  .cta { color: #000; }
+}
+
+.note { font-size: 14px; color: var(--muted); margin-top: 14px; }
+
+/* ─── Cards and sections ─────────────────────────────────────────────── */
+
+section { padding: 44px 0; }
+
+h2 {
+  font-size: 28px;
+  letter-spacing: -0.01em;
+  margin: 0 0 20px;
+}
+
+h3 { font-size: 19px; margin: 28px 0 8px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+
+.card h3 { margin: 0 0 6px; font-size: 17px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+.steps { counter-reset: step; }
+.steps .card::before {
+  counter-increment: step;
+  content: counter(step);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  .steps .card::before { color: var(--ink); }
+}
+
+/* ─── Support ────────────────────────────────────────────────────────── */
+
+details {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0 18px;
+  margin-bottom: 10px;
+}
+details[open] { padding-bottom: 6px; }
+summary {
+  cursor: pointer;
+  padding: 15px 0;
+  font-weight: 500;
+  list-style: none;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; float: right; color: var(--muted); }
+details[open] summary::after { content: "–"; }
+details p { margin-top: 0; color: var(--muted); font-size: 16px; }
+
+/* ─── Legal ──────────────────────────────────────────────────────────── */
+
+.legal { padding: 40px 0 64px; }
+.legal h2 { font-size: 22px; margin-top: 38px; }
+.legal h3 { font-size: 17px; }
+.legal p, .legal li { color: var(--ink); }
+.legal ul { padding-left: 22px; }
+.legal li { margin-bottom: 6px; }
+
+.meta {
+  color: var(--muted);
+  font-size: 15px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 20px;
+}
+
+.toc {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin: 24px 0;
+}
+.toc ol { margin: 0; padding-left: 20px; }
+.toc li { margin-bottom: 4px; }
+
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 15px; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; }
+
+/* ─── Footer ─────────────────────────────────────────────────────────── */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 32px 0 48px;
+  color: var(--muted);
+  font-size: 15px;
+}
+footer .wrap { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+footer .spacer { margin-left: auto; }
+
+@media (max-width: 600px) {
+  h1 { font-size: 34px; }
+  .lede { font-size: 18px; }
+  .hero { padding: 48px 0 36px; }
+}
+
+/* ─── Hero with a phone in it ────────────────────────────────────────── */
+
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 48px;
+  align-items: center;
+  padding: 72px 0 56px;
+  text-align: left;
+}
+
+.hero-split h1 { font-size: 48px; }
+.hero-split .lede { margin: 0 0 28px; max-width: none; }
+.hero-split .note { margin-top: 16px; }
+
+.phone {
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.16);
+  display: block;
+  width: 100%;
+}
+@media (prefers-color-scheme: dark) {
+  .phone { box-shadow: 0 22px 50px rgba(0, 0, 0, 0.6); }
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.facts div { background: var(--paper); padding: 20px 18px; }
+.facts strong { display: block; font-size: 22px; letter-spacing: -0.01em; }
+.facts span { color: var(--muted); font-size: 14px; }
+
+/* ─── Alternating feature rows ───────────────────────────────────────── */
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
+  align-items: center;
+  padding: 34px 0;
+}
+.row.flip > .art { order: -1; }
+.row .art img { width: 100%; display: block; }
+.row .art.shot { max-width: 280px; margin: 0 auto; }
+.row h3 { font-size: 24px; margin: 0 0 10px; letter-spacing: -0.01em; }
+.row p { color: var(--muted); margin: 0; }
+
+.eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.band { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+/* ─── Support extras ─────────────────────────────────────────────────── */
+
+.search {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 17px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.search:focus { outline: 2px solid var(--blue); outline-offset: 1px; }
+
+.quick { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 6px; }
+.quick a {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 15px;
+  color: var(--ink);
+}
+.quick a:hover { text-decoration: none; border-color: var(--blue); color: var(--blue); }
+
+.empty { color: var(--muted); padding: 20px 0; display: none; }
+
+@media (max-width: 760px) {
+  .hero-split { grid-template-columns: 1fr; text-align: center; padding-top: 48px; }
+  .hero-split .art { max-width: 260px; margin: 0 auto; }
+  .hero-split h1 { font-size: 34px; }
+  .row { grid-template-columns: 1fr; gap: 24px; }
+  .row.flip > .art { order: 0; }
+}
+
+/* Google's own badge asset, at Google's own proportions. The padding inside
+   the image is part of the artwork, so the link gets a negative margin rather
+   than a smaller image. */
+.badge { display: inline-block; margin: 0 0 4px -10px; }
+.badge img { height: 62px; width: auto; display: block; }
+.badge:hover { text-decoration: none; }
