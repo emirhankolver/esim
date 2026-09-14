@@ -2,7 +2,7 @@
   "name": "milo-esim-site",
   "description": "The Milo eSIM website: four static pages served by GitHub Pages.",
   "scripts": {
-    "build": "tailwindcss -i src/input.css -o styles.css --minify",
+    "build": "tailwindcss -i src/input.css -o styles.css --minify && node scripts/stamp.mjs",
     "dev": "tailwindcss -i src/input.css -o styles.css --watch"
   },
   "repository": {
