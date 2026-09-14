@@ -8,163 +8,284 @@
 <link rel="icon" href="assets/logo.png">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<header>
-  <div class="wrap">
-    <a class="brand" href="index.html"><img src="assets/logo.png" alt="">Milo eSIM</a>
+<body class="bg-page text-ink antialiased dark:bg-night dark:text-chalk">
+
+<header class="sticky top-0 z-10 border-b border-line bg-paper dark:border-night-line dark:bg-night-raised">
+  <div class="mx-auto flex min-h-16 max-w-[860px] flex-wrap items-center gap-4 px-5">
+    <a class="mr-auto flex items-center gap-2.5 font-semibold text-ink dark:text-chalk" href="index.html">
+      <img class="block h-[30px] w-[30px] rounded-[7px]" src="assets/logo.png" alt="">Milo eSIM
+    </a>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="support.html" class="active">Support</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
+        <a class="ml-5 text-[15px] first:ml-0 text-muted dark:text-chalk-muted hover:text-ink dark:hover:text-chalk" href="index.html">Home</a>
+        <a class="ml-5 text-[15px] first:ml-0 text-ink dark:text-chalk" href="support.html">Support</a>
+        <a class="ml-5 text-[15px] first:ml-0 text-muted dark:text-chalk-muted hover:text-ink dark:hover:text-chalk" href="privacy.html">Privacy</a>
+        <a class="ml-5 text-[15px] first:ml-0 text-muted dark:text-chalk-muted hover:text-ink dark:hover:text-chalk" href="terms.html">Terms</a>
     </nav>
   </div>
 </header>
 
-<section class="wrap">
-  <h1 style="font-size:36px;margin-top:40px">How can we help?</h1>
-  <p class="lede" style="margin-left:0;margin-bottom:22px">Answers to the
+<section class="mx-auto max-w-[860px] px-5 pt-10">
+  <h1 class="mb-4 text-4xl font-bold tracking-tight">How can we help?</h1>
+  <p class="mb-6 text-xl text-muted dark:text-chalk-muted">Answers to the
   questions we are asked most. If yours is not here, email
-  <a href="mailto:support@turnaworks.com">support@turnaworks.com</a> — we answer
-  by email, usually within a day.</p>
+  <a class="text-brand hover:underline" href="mailto:support@turnaworks.com">support@turnaworks.com</a>
+  — we answer by email, usually within a day.</p>
 
-  <input id="q" class="search" type="search" autocomplete="off"
+  <input id="q" type="search" autocomplete="off"
+         class="w-full rounded-full border border-line bg-paper px-5 py-3.5 text-[17px] text-ink outline-none focus:border-brand focus:ring-2 focus:ring-brand/40 dark:border-night-line dark:bg-night-raised dark:text-chalk"
          placeholder="Search — try &ldquo;install&rdquo;, &ldquo;refund&rdquo;, &ldquo;no data&rdquo;"
          aria-label="Search the help pages">
-  <div class="quick">
-    <a href="#install">Installing an eSIM</a>
-    <a href="#nodata">No data after landing</a>
-    <a href="#refunds">Refunds</a>
-    <a href="#credits">Credits</a>
+
+  <div class="mt-3.5 flex flex-wrap gap-2">
+    <a class="rounded-full border border-line bg-paper px-4 py-2 text-[15px] text-ink hover:border-brand hover:text-brand dark:border-night-line dark:bg-night-raised dark:text-chalk" href="#install">Installing an eSIM</a>
+    <a class="rounded-full border border-line bg-paper px-4 py-2 text-[15px] text-ink hover:border-brand hover:text-brand dark:border-night-line dark:bg-night-raised dark:text-chalk" href="#nodata">No data after landing</a>
+    <a class="rounded-full border border-line bg-paper px-4 py-2 text-[15px] text-ink hover:border-brand hover:text-brand dark:border-night-line dark:bg-night-raised dark:text-chalk" href="#refunds">Refunds</a>
+    <a class="rounded-full border border-line bg-paper px-4 py-2 text-[15px] text-ink hover:border-brand hover:text-brand dark:border-night-line dark:bg-night-raised dark:text-chalk" href="#credits">Credits</a>
   </div>
-  <p id="empty" class="empty">Nothing matches that. Email
-  <a href="mailto:support@turnaworks.com">support@turnaworks.com</a> and a person
-  will read it.</p>
+
+  <p id="empty" class="hidden py-5 text-muted dark:text-chalk-muted">Nothing
+  matches that. Email
+  <a class="text-brand hover:underline" href="mailto:support@turnaworks.com">support@turnaworks.com</a>
+  and a person will read it.</p>
 </section>
 
-<section class="wrap">
-  <h2>About Milo</h2>
-  <details>
-    <summary>What is an eSIM?</summary>
-    <p>An eSIM is a SIM card built into your phone. Instead of putting a piece of plastic in a tray, you install a profile over the internet — so you can buy a plan for your destination while you are still at home and switch it on when you land.</p>
-  </details>
-  <details>
-    <summary>What makes Milo different?</summary>
-    <p>Milo sells credits rather than contracts. You buy credits once and spend them on any plan, in any country we cover, at any time. Nothing renews on its own and nothing expires the moment your trip ends.</p>
-  </details>
-  <details>
-    <summary>Does Milo give me a phone number?</summary>
-    <p>No. Milo plans are data only. Your own SIM stays in the phone, so you keep your number for calls and messages while the internet runs over Milo. Milo does not carry calls or SMS and cannot be used to reach emergency services.</p>
-  </details>
+<section class="mx-auto max-w-[860px] px-5 py-6">
+  <h2 class="mb-5 text-[28px] font-bold tracking-tight">About Milo</h2>
+  
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>What is an eSIM?</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">An eSIM is a SIM card built into your phone. Instead of putting a piece of plastic in a tray, you install a profile over the internet — so you can buy a plan for your destination while you are still at home and switch it on when you land.</p>
+    </details>
+
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>What makes Milo different?</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">Milo sells credits rather than contracts. You buy credits once and spend them on any plan, in any country we cover, at any time. Nothing renews on its own and nothing expires the moment your trip ends.</p>
+    </details>
+
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>Does Milo give me a phone number?</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">No. Milo plans are data only. Your own SIM stays in the phone, so you keep your number for calls and messages while the internet runs over Milo. Milo does not carry calls or SMS and cannot be used to reach emergency services.</p>
+    </details>
+
 </section>
 
-<section class="wrap">
-  <h2>Getting started</h2>
-  <details>
-    <summary>Which phones work with Milo?</summary>
-    <p>Any eSIM-capable phone that is not locked to a carrier. Most phones sold in the last few years support eSIM — you can check in your phone's network settings, where an option to add an eSIM or a data plan will appear.</p>
-  </details>
-  <details>
-    <summary id="install">How do I install my eSIM?</summary>
-    <p>Buy a plan in the app, then open the eSIM and tap Set up. Your phone's own installer opens and adds the profile. You can also scan the QR code with a second device, or enter the activation details by hand.</p>
-  </details>
-  <details>
-    <summary>When should I install it?</summary>
-    <p>Before you travel, on Wi-Fi. Installing needs an internet connection, and finding one at an airport in a country where your phone has no data is the hard way to do it. The plan itself does not start counting until it connects to a network at your destination.</p>
-  </details>
+<section class="mx-auto max-w-[860px] px-5 py-6">
+  <h2 class="mb-5 text-[28px] font-bold tracking-tight">Getting started</h2>
+  
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>Which phones work with Milo?</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">Any eSIM-capable phone that is not locked to a carrier. Most phones sold in the last few years support eSIM — you can check in your phone's network settings, where an option to add an eSIM or a data plan will appear.</p>
+    </details>
+
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary id="install" class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>How do I install my eSIM?</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">Buy a plan in the app, then open the eSIM and tap Set up. Your phone's own installer opens and adds the profile. You can also scan the QR code with a second device, or enter the activation details by hand.</p>
+    </details>
+
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>When should I install it?</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">Before you travel, on Wi-Fi. Installing needs an internet connection, and finding one at an airport in a country where your phone has no data is the hard way to do it. The plan itself does not start counting until it connects to a network at your destination.</p>
+    </details>
+
 </section>
 
-<section class="wrap">
-  <h2>Plans and data</h2>
-  <details>
-    <summary>Where do Milo plans work?</summary>
-    <p>In more than 190 countries and regions. Plans come in three shapes: a single country, a region such as Europe or Asia, and global plans that work across continents. The countries each plan covers are listed on the plan itself.</p>
-  </details>
-  <details>
-    <summary>How do I know how much data is left?</summary>
-    <p>Open the eSIM in the app. Data and days left are shown there, and a home-screen widget shows the same figures at a glance. Usage comes from the network and can lag by one to three hours.</p>
-  </details>
-  <details>
-    <summary>Can I add more data?</summary>
-    <p>Yes. Open the eSIM and choose Add data. The top-up lands on the profile you already installed — there is nothing to reinstall and no second eSIM.</p>
-  </details>
-  <details>
-    <summary>My plan ran out. What now?</summary>
-    <p>Buy another one. An expired plan cannot be topped up, so the app will offer you a new plan for the same destination.</p>
-  </details>
+<section class="mx-auto max-w-[860px] px-5 py-6">
+  <h2 class="mb-5 text-[28px] font-bold tracking-tight">Plans and data</h2>
+  
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>Where do Milo plans work?</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">In more than 190 countries and regions. Plans come in three shapes: a single country, a region such as Europe or Asia, and global plans that work across continents. The countries each plan covers are listed on the plan itself.</p>
+    </details>
+
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>How do I know how much data is left?</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">Open the eSIM in the app. Data and days left are shown there, and a home-screen widget shows the same figures at a glance. Usage comes from the network and can lag by one to three hours.</p>
+    </details>
+
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>Can I add more data?</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">Yes. Open the eSIM and choose Add data. The top-up lands on the profile you already installed — there is nothing to reinstall and no second eSIM.</p>
+    </details>
+
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>My plan ran out. What now?</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">Buy another one. An expired plan cannot be topped up, so the app will offer you a new plan for the same destination.</p>
+    </details>
+
 </section>
 
-<section class="wrap">
-  <h2>Credits and payments</h2>
-  <details>
-    <summary id="credits">What are credits?</summary>
-    <p>Credits are what you spend on plans. You buy them once, in a pack, and they sit in your balance until you use them. Prices in the app are shown in credits, so the same plan costs the same wherever you buy it.</p>
-  </details>
-  <details>
-    <summary>How do I pay?</summary>
-    <p>Through Google Play. Your card details never reach us — the store handles the payment and tells us the purchase succeeded.</p>
-  </details>
-  <details>
-    <summary>I paid but my credits are missing.</summary>
-    <p>Open Profile and tap Restore purchases. That re-checks your purchases with the store and puts anything missing back. If they are still missing, email us with the order number from your store receipt.</p>
-  </details>
-  <details>
-    <summary id="refunds">Can I get a refund?</summary>
-    <p>Credit purchases are handled by Google Play, so refunds for them follow Google's refund policy. Plans bought with credits are different: cancel one before you install it and the credits go straight back to your balance. Once a plan is installed on a phone it can no longer be cancelled.</p>
-  </details>
+<section class="mx-auto max-w-[860px] px-5 py-6">
+  <h2 class="mb-5 text-[28px] font-bold tracking-tight">Credits and payments</h2>
+  
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary id="credits" class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>What are credits?</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">Credits are what you spend on plans. You buy them once, in a pack, and they sit in your balance until you use them. Prices in the app are shown in credits, so the same plan costs the same wherever you buy it.</p>
+    </details>
+
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>How do I pay?</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">Through Google Play. Your card details never reach us — the store handles the payment and tells us the purchase succeeded.</p>
+    </details>
+
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>I paid but my credits are missing.</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">Open Profile and tap Restore purchases. That re-checks your purchases with the store and puts anything missing back. If they are still missing, email us with the order number from your store receipt.</p>
+    </details>
+
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary id="refunds" class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>Can I get a refund?</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">Credit purchases are handled by Google Play, so refunds for them follow Google's refund policy. Plans bought with credits are different: cancel one before you install it and the credits go straight back to your balance. Once a plan is installed on a phone it can no longer be cancelled.</p>
+    </details>
+
 </section>
 
-<section class="wrap">
-  <h2>Account</h2>
-  <details>
-    <summary>Do I need an account?</summary>
-    <p>No. The app works straight away without one. Signing in with Google links your eSIMs and credits to that account so they follow you to a new phone — without it, they live on this device only.</p>
-  </details>
-  <details>
-    <summary>How do I delete my account?</summary>
-    <p>Profile, then My account, then Delete account. This removes your account and its data. Active eSIMs stop working and unused credits are lost, so finish or cancel anything you still want first.</p>
-  </details>
-  <details>
-    <summary>How do I turn notifications off?</summary>
-    <p>Profile has a Notifications switch. Turning it off stops Milo notifications without touching any of your other apps.</p>
-  </details>
+<section class="mx-auto max-w-[860px] px-5 py-6">
+  <h2 class="mb-5 text-[28px] font-bold tracking-tight">Account</h2>
+  
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>Do I need an account?</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">No. The app works straight away without one. Signing in with Google links your eSIMs and credits to that account so they follow you to a new phone — without it, they live on this device only.</p>
+    </details>
+
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>How do I delete my account?</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">Profile, then My account, then Delete account. This removes your account and its data. Active eSIMs stop working and unused credits are lost, so finish or cancel anything you still want first.</p>
+    </details>
+
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>How do I turn notifications off?</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">Profile has a Notifications switch. Turning it off stops Milo notifications without touching any of your other apps.</p>
+    </details>
+
 </section>
 
-<section class="wrap">
-  <h2>Troubleshooting</h2>
-  <details>
-    <summary id="nodata">I have no data after landing.</summary>
-    <p>Three things, in order. Check the Milo eSIM is switched on in your phone's network settings and selected for mobile data. Turn on data roaming for that eSIM — your plan is roaming on a local network, so the setting has to be on. Then restart the phone, which is what fixes it most of the time.</p>
-  </details>
-  <details>
-    <summary>The QR code will not scan.</summary>
-    <p>Use Set up in the app instead: it hands the profile to your phone directly, with no camera involved. If you are scanning from the same phone that will hold the eSIM, scanning is not possible anyway — that is what the direct install is for.</p>
-  </details>
-  <details>
-    <summary>My phone says the eSIM cannot be added.</summary>
-    <p>Usually one of three things: the phone is locked to a carrier, the profile has already been installed once and cannot be installed again, or there is no internet connection. A profile can only be installed on one device.</p>
-  </details>
-  <details>
-    <summary>How do I reach a human?</summary>
-    <p>Email support@turnaworks.com. Include the customer ID from your Profile page — it lets us find your account and your eSIMs without a round of questions.</p>
-  </details>
+<section class="mx-auto max-w-[860px] px-5 py-6">
+  <h2 class="mb-5 text-[28px] font-bold tracking-tight">Troubleshooting</h2>
+  
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary id="nodata" class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>I have no data after landing.</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">Three things, in order. Check the Milo eSIM is switched on in your phone's network settings and selected for mobile data. Turn on data roaming for that eSIM — your plan is roaming on a local network, so the setting has to be on. Then restart the phone, which is what fixes it most of the time.</p>
+    </details>
+
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>The QR code will not scan.</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">Use Set up in the app instead: it hands the profile to your phone directly, with no camera involved. If you are scanning from the same phone that will hold the eSIM, scanning is not possible anyway — that is what the direct install is for.</p>
+    </details>
+
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>My phone says the eSIM cannot be added.</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">Usually one of three things: the phone is locked to a carrier, the profile has already been installed once and cannot be installed again, or there is no internet connection. A profile can only be installed on one device.</p>
+    </details>
+
+    <details class="group mb-2.5 rounded-2xl border border-line bg-paper px-5 dark:border-night-line dark:bg-night-raised">
+      <summary class="flex cursor-pointer list-none items-center justify-between py-4 font-medium">
+        <span>How do I reach a human?</span>
+        <span class="ml-4 text-muted group-open:hidden dark:text-chalk-muted">+</span>
+        <span class="ml-4 hidden text-muted group-open:inline dark:text-chalk-muted">–</span>
+      </summary>
+      <p class="pb-4 text-muted dark:text-chalk-muted">Email support@turnaworks.com. Include the customer ID from your Profile page — it lets us find your account and your eSIMs without a round of questions.</p>
+    </details>
+
 </section>
 
-<section class="wrap">
-  <h2>Still stuck?</h2>
-  <div class="card">
-    <h3>Email support</h3>
-    <p style="margin-bottom:14px">Tell us what happened, what you expected, and
-    your customer ID from the Profile page. Screenshots help.</p>
-    <a class="cta" href="mailto:support@turnaworks.com">support@turnaworks.com</a>
+<section class="mx-auto max-w-[860px] px-5 pb-6">
+  <h2 class="mb-5 text-[28px] font-bold tracking-tight">Still stuck?</h2>
+  <div class="rounded-2xl border border-line bg-paper p-6 dark:border-night-line dark:bg-night-raised">
+    <h3 class="mb-1.5 text-[17px] font-semibold">Email support</h3>
+    <p class="mb-4 text-[15px] text-muted dark:text-chalk-muted">Tell us what
+    happened, what you expected, and your customer ID from the Profile page.
+    Screenshots help.</p>
+    <a class="inline-block rounded-full bg-brand px-7 py-3.5 font-semibold text-white hover:bg-brand-dark dark:text-black"
+       href="mailto:support@turnaworks.com">support@turnaworks.com</a>
   </div>
 </section>
-<footer>
-  <div class="wrap">
+
+<footer class="mt-10 border-t border-line py-8 pb-12 text-[15px] text-muted dark:border-night-line dark:text-chalk-muted">
+  <div class="mx-auto flex max-w-[860px] flex-wrap items-center gap-4 px-5">
     <span>&copy; 2026 TurnaWorks Ltd.</span>
-    <span class="spacer"><a href="mailto:support@turnaworks.com">support@turnaworks.com</a></span>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
+    <span class="ml-auto"><a class="text-brand hover:underline" href="mailto:support@turnaworks.com">support@turnaworks.com</a></span>
+    <a class="text-brand hover:underline" href="privacy.html">Privacy</a>
+    <a class="text-brand hover:underline" href="terms.html">Terms</a>
   </div>
 </footer>
 <script>
@@ -175,7 +296,7 @@
   var empty = document.getElementById('empty');
   if (!box) return;
   var items = [].slice.call(document.querySelectorAll('details'));
-  var groups = [].slice.call(document.querySelectorAll('section.wrap')).slice(1);
+  var groups = [].slice.call(document.querySelectorAll('section')).slice(1, -1);
 
   box.addEventListener('input', function () {
     var term = box.value.trim().toLowerCase();
@@ -183,18 +304,18 @@
 
     items.forEach(function (item) {
       var match = !term || item.textContent.toLowerCase().indexOf(term) !== -1;
-      item.style.display = match ? '' : 'none';
+      item.classList.toggle('hidden', !match);
       item.open = !!term && match;
       if (match) hits++;
     });
 
     // A heading with nothing under it is just noise.
     groups.forEach(function (group) {
-      var visible = group.querySelector('details:not([style*="none"])');
-      group.style.display = (term && !visible) ? 'none' : '';
+      var visible = group.querySelector('details:not(.hidden)');
+      group.classList.toggle('hidden', !!term && !visible);
     });
 
-    empty.style.display = (term && hits === 0) ? 'block' : 'none';
+    empty.classList.toggle('hidden', !(term && hits === 0));
   });
 })();
 </script>

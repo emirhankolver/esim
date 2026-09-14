@@ -8,121 +8,102 @@
 <link rel="icon" href="assets/logo.png">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<header>
-  <div class="wrap">
-    <a class="brand" href="index.html"><img src="assets/logo.png" alt="">Milo eSIM</a>
+<body class="bg-page text-ink antialiased dark:bg-night dark:text-chalk">
+
+<header class="sticky top-0 z-10 border-b border-line bg-paper dark:border-night-line dark:bg-night-raised">
+  <div class="mx-auto flex min-h-16 max-w-[860px] flex-wrap items-center gap-4 px-5">
+    <a class="mr-auto flex items-center gap-2.5 font-semibold text-ink dark:text-chalk" href="index.html">
+      <img class="block h-[30px] w-[30px] rounded-[7px]" src="assets/logo.png" alt="">Milo eSIM
+    </a>
     <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="support.html">Support</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
+        <a class="ml-5 text-[15px] first:ml-0 text-ink dark:text-chalk" href="index.html">Home</a>
+        <a class="ml-5 text-[15px] first:ml-0 text-muted dark:text-chalk-muted hover:text-ink dark:hover:text-chalk" href="support.html">Support</a>
+        <a class="ml-5 text-[15px] first:ml-0 text-muted dark:text-chalk-muted hover:text-ink dark:hover:text-chalk" href="privacy.html">Privacy</a>
+        <a class="ml-5 text-[15px] first:ml-0 text-muted dark:text-chalk-muted hover:text-ink dark:hover:text-chalk" href="terms.html">Terms</a>
     </nav>
   </div>
 </header>
 
-<div class="wrap hero-split">
-  <div>
-    <h1>Land already connected.</h1>
-    <p class="lede">Milo eSIM puts mobile data on your phone abroad — no physical
-    SIM, no shop, and no roaming bill waiting for you at home.</p>
-    <a class="cta" href="#get">Get Milo eSIM</a>
-    <p class="note">Needs an eSIM-capable, carrier-unlocked phone.</p>
+<div class="mx-auto max-w-[860px] px-5 grid items-center gap-12 py-14 md:grid-cols-[1fr_320px]">
+  <div class="text-center md:text-left">
+    <h1 class="mb-4 text-4xl font-bold leading-[1.12] tracking-tight md:text-5xl">Land already connected.</h1>
+    <p class="text-xl text-muted dark:text-chalk-muted mb-7">Milo eSIM puts mobile data on your phone abroad — no
+    physical SIM, no shop, and no roaming bill waiting for you at home.</p>
+    <a class="inline-block rounded-full bg-brand px-7 py-3.5 font-semibold text-white hover:bg-brand-dark dark:text-black" href="#get">Get Milo eSIM</a>
+    <p class="mt-4 text-sm text-muted dark:text-chalk-muted">Needs an eSIM-capable, carrier-unlocked phone.</p>
   </div>
-  <div class="art">
-    <img class="phone" src="assets/shot-home.png"
+  <div class="mx-auto max-w-[260px] md:max-w-none">
+    <img class="block w-full rounded-[28px] border border-line shadow-2xl dark:border-night-line"
+         src="assets/shot-home.png"
          alt="The Milo eSIM app showing popular destinations and global plans">
   </div>
 </div>
 
-<div class="wrap">
-  <div class="facts">
-    <div><strong>190+</strong><span>countries and regions</span></div>
-    <div><strong>60 sec</strong><span>to install, before you fly</span></div>
-    <div><strong>No plan</strong><span>nothing renews on its own</span></div>
-    <div><strong>Data only</strong><span>your number stays yours</span></div>
+<div class="mx-auto max-w-[860px] px-5">
+  <div class="grid gap-px overflow-hidden rounded-2xl border border-line bg-line dark:border-night-line dark:bg-night-line sm:grid-cols-2 lg:grid-cols-4">
+    <div class="bg-paper p-5 dark:bg-night-raised"><strong class="block text-[22px] tracking-tight">190+</strong><span class="text-sm text-muted dark:text-chalk-muted">countries and regions</span></div><div class="bg-paper p-5 dark:bg-night-raised"><strong class="block text-[22px] tracking-tight">60 sec</strong><span class="text-sm text-muted dark:text-chalk-muted">to install, before you fly</span></div><div class="bg-paper p-5 dark:bg-night-raised"><strong class="block text-[22px] tracking-tight">No plan</strong><span class="text-sm text-muted dark:text-chalk-muted">nothing renews on its own</span></div><div class="bg-paper p-5 dark:bg-night-raised"><strong class="block text-[22px] tracking-tight">Data only</strong><span class="text-sm text-muted dark:text-chalk-muted">your number stays yours</span></div>
   </div>
 </div>
 
-<section class="band">
-  <div class="wrap">
-    <h2 style="padding-top:20px">How it works</h2>
-
-    <div class="row">
+<section class="mt-11 border-y border-line bg-paper dark:border-night-line dark:bg-night-raised">
+  <div class="mx-auto max-w-[860px] px-5 py-11">
+    <h2 class="mb-5 text-[28px] font-bold tracking-tight">How it works</h2>
+    
+    <div class="grid items-center gap-11 py-8 md:grid-cols-2">
       <div>
-        <span class="eyebrow">Step one</span>
-        <h3>Pick a plan</h3>
-        <p>Choose where you are going and how much data you need. One country, a
-        whole region, or a global plan that follows you between continents.
-        Prices are in credits, so the same plan costs the same wherever you buy
-        it.</p>
+        <span class="mb-2.5 inline-block text-[13px] font-bold uppercase tracking-[0.06em] text-brand">Step one</span>
+        <h3 class="mb-2.5 text-2xl font-bold tracking-tight">Pick a plan</h3>
+        <p class="text-muted dark:text-chalk-muted">Choose where you are going and how much data you need. One country, a whole region, or a global plan that follows you between continents. Prices are in credits, so the same plan costs the same wherever you buy it.</p>
       </div>
-      <div class="art"><img src="assets/step-1.png" alt=""></div>
+      <div class=""><img class="w-full" src="assets/step-1.png" alt=""></div>
     </div>
 
-    <div class="row flip">
+    <div class="grid items-center gap-11 py-8 md:grid-cols-2">
       <div>
-        <span class="eyebrow">Step two</span>
-        <h3>Install it before you fly</h3>
-        <p>Add the eSIM to your phone in seconds over Wi-Fi. Your phone's own
-        installer does the work — no shop, no plastic, no paperwork. The plan
-        does not start counting until you land.</p>
+        <span class="mb-2.5 inline-block text-[13px] font-bold uppercase tracking-[0.06em] text-brand">Step two</span>
+        <h3 class="mb-2.5 text-2xl font-bold tracking-tight">Install it before you fly</h3>
+        <p class="text-muted dark:text-chalk-muted">Add the eSIM to your phone in seconds over Wi-Fi. Your phone's own installer does the work — no shop, no plastic, no paperwork. The plan does not start counting until you land.</p>
       </div>
-      <div class="art"><img src="assets/step-2.png" alt=""></div>
+      <div class="md:order-first"><img class="w-full" src="assets/step-2.png" alt=""></div>
     </div>
 
-    <div class="row">
+    <div class="grid items-center gap-11 py-8 md:grid-cols-2">
       <div>
-        <span class="eyebrow">Step three</span>
-        <h3>Land connected</h3>
-        <p>Switch it on when you arrive. Data and days left are in the app, and
-        on a home-screen widget if you would rather not open anything at all.</p>
+        <span class="mb-2.5 inline-block text-[13px] font-bold uppercase tracking-[0.06em] text-brand">Step three</span>
+        <h3 class="mb-2.5 text-2xl font-bold tracking-tight">Land connected</h3>
+        <p class="text-muted dark:text-chalk-muted">Switch it on when you arrive. Data and days left are in the app, and on a home-screen widget if you would rather not open anything at all.</p>
       </div>
-      <div class="art"><img src="assets/step-3.png" alt=""></div>
+      <div class=""><img class="w-full" src="assets/step-3.png" alt=""></div>
     </div>
+
   </div>
 </section>
 
-<section class="band">
-  <div class="wrap">
-    <h2 style="padding-top:20px">Good to know</h2>
-    <div class="grid" style="padding-bottom:20px">
-      <div class="card">
-        <h3>Top up without reinstalling</h3>
-        <p>Add data to the eSIM already on your phone. The profile stays where it
-        is.</p>
-      </div>
-      <div class="card">
-        <h3>Changed your mind</h3>
-        <p>Cancel a plan before you install it and the credits go straight back
-        to your balance.</p>
-      </div>
-      <div class="card">
-        <h3>Your number is untouched</h3>
-        <p>Your own SIM stays in the phone. Calls and messages keep working as
-        they always did.</p>
-      </div>
-    </div>
+<section class="mx-auto max-w-[860px] px-5 py-11">
+  <h2 class="mb-5 text-[28px] font-bold tracking-tight">Good to know</h2>
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="rounded-2xl border border-line bg-paper p-6 dark:border-night-line dark:bg-night-raised"><h3 class="mb-1.5 text-[17px] font-semibold">Top up without reinstalling</h3><p class="text-[15px] text-muted dark:text-chalk-muted">Add data to the eSIM already on your phone. The profile stays where it is.</p></div><div class="rounded-2xl border border-line bg-paper p-6 dark:border-night-line dark:bg-night-raised"><h3 class="mb-1.5 text-[17px] font-semibold">Changed your mind</h3><p class="text-[15px] text-muted dark:text-chalk-muted">Cancel a plan before you install it and the credits go straight back to your balance.</p></div><div class="rounded-2xl border border-line bg-paper p-6 dark:border-night-line dark:bg-night-raised"><h3 class="mb-1.5 text-[17px] font-semibold">Your number is untouched</h3><p class="text-[15px] text-muted dark:text-chalk-muted">Your own SIM stays in the phone. Calls and messages keep working as they always did.</p></div>
   </div>
 </section>
 
-<section class="wrap" id="get">
-  <h2>Get the app</h2>
-  <p class="lede" style="margin:0 0 18px">Milo eSIM is built for Android. An iOS
-  version is on the way.</p>
-  <a class="badge" href="https://play.google.com/store/apps/details?id=com.turnaworks.esim">
-    <img src="assets/google-play-badge.png" alt="Get it on Google Play">
+<section class="mx-auto max-w-[860px] px-5 pb-11" id="get">
+  <h2 class="mb-5 text-[28px] font-bold tracking-tight">Get the app</h2>
+  <p class="text-xl text-muted dark:text-chalk-muted mb-4">Milo eSIM is built for Android. An iOS version is on the way.</p>
+  <a class="-ml-2.5 inline-block" href="https://play.google.com/store/apps/details?id=com.turnaworks.esim">
+    <img class="block h-[62px] w-auto" src="assets/google-play-badge.png" alt="Get it on Google Play">
   </a>
-  <p class="note" style="margin-top:0">Plans are data only. Milo does not provide
-  a phone number, does not carry calls or SMS, and cannot reach emergency
-  services. Questions? <a href="support.html">We have a help page</a>.</p>
+  <p class="mt-2 text-sm text-muted dark:text-chalk-muted">Plans are data only.
+  Milo does not provide a phone number, does not carry calls or SMS, and cannot
+  reach emergency services. Questions?
+  <a class="text-brand hover:underline" href="support.html">We have a help page</a>.</p>
 </section>
-<footer>
-  <div class="wrap">
+
+<footer class="mt-10 border-t border-line py-8 pb-12 text-[15px] text-muted dark:border-night-line dark:text-chalk-muted">
+  <div class="mx-auto flex max-w-[860px] flex-wrap items-center gap-4 px-5">
     <span>&copy; 2026 TurnaWorks Ltd.</span>
-    <span class="spacer"><a href="mailto:support@turnaworks.com">support@turnaworks.com</a></span>
-    <a href="privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
+    <span class="ml-auto"><a class="text-brand hover:underline" href="mailto:support@turnaworks.com">support@turnaworks.com</a></span>
+    <a class="text-brand hover:underline" href="privacy.html">Privacy</a>
+    <a class="text-brand hover:underline" href="terms.html">Terms</a>
   </div>
 </footer>
 </body>

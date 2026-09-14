@@ -1,53 +1,54 @@
 # Milo eSIM website
 
-Four static pages for GitHub Pages. No build step, no dependencies: open
-`index.html` in a browser and what you see is what ships.
+Four static pages for GitHub Pages, styled with Tailwind CSS.
 
 ```
 index.html     landing
 support.html   help centre
 privacy.html   privacy policy
 terms.html     terms of use
-styles.css     one stylesheet for all four
-assets/logo.png
+src/input.css  Tailwind entry point and the palette
+styles.css     built from the above — do not edit by hand
+assets/
 ```
 
-## Publishing
+## Styling
 
-Copy this folder into a GitHub repository and turn on Pages (Settings → Pages →
-deploy from branch, root of `main`). A custom domain goes in a `CNAME` file next
-to `index.html`.
+Every page is styled with utility classes in the markup. The only hand-written
+CSS is `src/input.css`, which sets the palette — the same values as the app's
+own `Color.kt`, so a screenshot dropped onto a page sits in the blue around it.
 
-## What is in them
-
-The pages are filled in: TurnaWorks Ltd. as the company, an effective date, and
-Turkish law with the İstanbul courts for disputes. There is deliberately no
-postal address — the identity and an email that reaches a person are what these
-pages have to carry.
-
-The landing page says the app is coming soon to Google Play rather than linking
-to it. When the listing exists, that sentence becomes a link again.
-
-## Then point the app at it
-
-`AppLinks.kt` in the Android project still points at buildup.turnaworks.com:
-
-```kotlin
-const val PRIVACY = "…/privacy.html"
-const val TERMS   = "…/terms.html"
-const val SUPPORT = "…/support.html"
+```bash
+npm install
+npm run build     # writes styles.css, minified
+npm run dev       # rebuilds on save
 ```
 
-Google Play also wants the privacy policy URL in the store listing, and it is
-checked during review.
+`styles.css` is committed so the site works straight from a checkout, and the
+deploy workflow rebuilds it on every push. That second part matters: Tailwind
+only emits the classes it finds in the HTML, so a class added by hand would
+otherwise have no styles until someone remembered to run the build.
+
+## What is in the pages
+
+TurnaWorks Ltd. as the company, an effective date, and Turkish law with the
+İstanbul courts for disputes. There is deliberately no postal address — the
+identity and an email that reaches a person are what these pages have to carry.
+
+## The app points here
+
+`AppLinks.kt` in the Android project links to `/privacy.html`, `/terms.html`
+and `/support.html` on this domain. Renaming a file breaks the app's links in
+every installed copy, so rename with that in mind.
 
 ## What the legal text claims
 
 It was written from the app as it stands: data-only plans with no phone number
-and no SMS, credits bought through the app stores, refunds of credits handled by
-the store, plan cancellations refunded in credits while the eSIM is uninstalled,
-and the SDKs actually in the build — Firebase Analytics and Crashlytics,
-OneSignal, RevenueCat and Meta advertising. If any of that changes, these pages
-are wrong and Play's data safety form will disagree with them.
+and no SMS, credits bought through the app stores, refunds of credits handled
+by the store, plan cancellations refunded in credits while the eSIM is
+uninstalled, and the SDKs actually in the build — Firebase Analytics and
+Crashlytics, OneSignal, RevenueCat and Meta advertising. If any of that
+changes, these pages are wrong and Play's data safety form will disagree with
+them.
 
 It is not legal advice. Have someone qualified read it before you rely on it.

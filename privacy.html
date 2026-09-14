@@ -8,27 +8,34 @@
 <link rel="icon" href="assets/logo.png">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<header>
-  <div class="wrap">
-    <a class="brand" href="index.html"><img src="assets/logo.png" alt="">Milo eSIM</a>
+<body class="bg-page text-ink antialiased dark:bg-night dark:text-chalk">
+
+<header class="sticky top-0 z-10 border-b border-line bg-paper dark:border-night-line dark:bg-night-raised">
+  <div class="mx-auto flex min-h-16 max-w-[860px] flex-wrap items-center gap-4 px-5">
+    <a class="mr-auto flex items-center gap-2.5 font-semibold text-ink dark:text-chalk" href="index.html">
+      <img class="block h-[30px] w-[30px] rounded-[7px]" src="assets/logo.png" alt="">Milo eSIM
+    </a>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="support.html">Support</a>
-      <a href="privacy.html" class="active">Privacy</a>
-      <a href="terms.html">Terms</a>
+        <a class="ml-5 text-[15px] first:ml-0 text-muted dark:text-chalk-muted hover:text-ink dark:hover:text-chalk" href="index.html">Home</a>
+        <a class="ml-5 text-[15px] first:ml-0 text-muted dark:text-chalk-muted hover:text-ink dark:hover:text-chalk" href="support.html">Support</a>
+        <a class="ml-5 text-[15px] first:ml-0 text-ink dark:text-chalk" href="privacy.html">Privacy</a>
+        <a class="ml-5 text-[15px] first:ml-0 text-muted dark:text-chalk-muted hover:text-ink dark:hover:text-chalk" href="terms.html">Terms</a>
     </nav>
   </div>
 </header>
 
-<div class="wrap legal">
-<h1 style="font-size:36px">Privacy Policy</h1>
-<p class="meta">Effective date: 13 September 2026<br>
-Controller: TurnaWorks Ltd.<br>
-Contact: <a href="mailto:support@turnaworks.com">support@turnaworks.com</a></p>
+<div class="mx-auto max-w-[860px] px-5 py-10 pb-16">
+  <h1 class="text-4xl font-bold tracking-tight">Privacy Policy</h1>
 
-<div class="toc">
-<ol>
+  <p class="border-b border-line pb-5 text-[15px] text-muted dark:border-night-line dark:text-chalk-muted">
+    Effective date: 13 September 2026<br>
+Controller: TurnaWorks Ltd.<br>
+Contact: <a href="mailto:support@turnaworks.com">support@turnaworks.com</a>
+  </p>
+
+  <nav class="my-6 rounded-2xl border border-line bg-paper px-6 py-4 dark:border-night-line dark:bg-night-raised">
+    <div class="prose prose-neutral max-w-none dark:prose-invert prose-headings:tracking-tight prose-a:text-brand prose-a:no-underline hover:prose-a:underline prose-h2:text-[22px] prose-h3:text-[17px] prose-th:text-muted dark:prose-th:text-chalk-muted prose-li:my-1">
+      <ol>
 <li><a href="#scope">Who this applies to</a></li>
 <li><a href="#collect">What we collect</a></li>
 <li><a href="#use">Why we use it</a></li>
@@ -41,9 +48,11 @@ Contact: <a href="mailto:support@turnaworks.com">support@turnaworks.com</a></p>
 <li><a href="#changes">Changes</a></li>
 <li><a href="#contact">Contact</a></li>
 </ol>
-</div>
+    </div>
+  </nav>
 
-<h2 id="scope">1. Who this applies to</h2>
+  <div class="prose prose-neutral max-w-none dark:prose-invert prose-headings:tracking-tight prose-a:text-brand prose-a:no-underline hover:prose-a:underline prose-h2:text-[22px] prose-h3:text-[17px] prose-th:text-muted dark:prose-th:text-chalk-muted">
+    <h2 id="scope">1. Who this applies to</h2>
 <p>This policy covers the Milo eSIM mobile app, this website, and our support
 correspondence. TurnaWorks Ltd. is the controller of the personal data
 described here.</p>
@@ -203,6 +212,15 @@ the app rather than hope you notice here.</p>
     <span class="spacer"><a href="mailto:support@turnaworks.com">support@turnaworks.com</a></span>
     <a href="privacy.html">Privacy</a>
     <a href="terms.html">Terms</a>
+  </div>
+</div>
+
+<footer class="mt-10 border-t border-line py-8 pb-12 text-[15px] text-muted dark:border-night-line dark:text-chalk-muted">
+  <div class="mx-auto flex max-w-[860px] flex-wrap items-center gap-4 px-5">
+    <span>&copy; 2026 TurnaWorks Ltd.</span>
+    <span class="ml-auto"><a class="text-brand hover:underline" href="mailto:support@turnaworks.com">support@turnaworks.com</a></span>
+    <a class="text-brand hover:underline" href="privacy.html">Privacy</a>
+    <a class="text-brand hover:underline" href="terms.html">Terms</a>
   </div>
 </footer>
 </body>

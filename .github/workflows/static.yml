@@ -33,6 +33,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      # Rebuilds the stylesheet from the classes actually used in the HTML, so
+      # a class added by hand — here or in GitHub's own editor — is styled on
+      # the deployed site without anyone remembering to run a build.
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Build CSS
+        run: |
+          npm ci
+          npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
